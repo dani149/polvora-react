@@ -64,7 +64,7 @@ export function CursorGlow() {
 /* ─── NAVBAR ─────────────────────────────────────────────────────── */
 const solucionesDropdown = [
   { label: 'Sistema Web Estratégico', href: '/soluciones/sistema-web-estrategico' },
-  { label: 'Sistema de Captación de Leads', href: '/#soluciones' },
+  { label: 'Sistema de Captación de Leads', href: '/soluciones/sistema-captacion-de-leads' },
   { label: 'Sistema de Ventas con IA', href: '/#soluciones' },
   { label: 'Infraestructura Digital de Ventas', href: '/#soluciones' },
 ]
@@ -86,7 +86,7 @@ export function Navbar() {
     <>
       <header className={`navbar${scrolled ? ' scrolled' : ''}`}>
         <div className="container navbar-inner">
-          <a href="/"><img src="/logo-blanco.svg" style={{ width: 168 }} alt="Pólvora" /></a>
+          <a href="/"><img src="/logo-blanco.svg" width={168} height={53} style={{ height: 53 }} alt="Pólvora" /></a>
           <nav className="nav-links">
             <div className="nav-dropdown">
               <button className="nav-dropdown__trigger" aria-haspopup="true">
@@ -163,12 +163,40 @@ export function Diagnostic() {
     setForm(f => ({ ...f, [field]: ev.target.value }))
     setErrors(e => ({ ...e, [field]: false }))
   }
-  const handleSubmit = (ev) => {
+  const FORMSUBMIT_URL = 'https://formsubmit.co/ajax/daniela@agenciapolvora.cl'
+
+  const handleSubmit = async (ev) => {
     ev.preventDefault()
     const e = validate()
     if (Object.keys(e).length) { setErrors(e); return }
     setLoading(true)
-    setTimeout(() => { setLoading(false); setSubmitted(true) }, 1400)
+    try {
+      const res = await fetch(FORMSUBMIT_URL, {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json', 'Accept': 'application/json' },
+        body: JSON.stringify({
+          nombre: form.nombre,
+          email: form.email,
+          empresa: form.empresa,
+          web: form.web,
+          industria: form.industria,
+          problema: form.problema,
+          mensaje: form.mensaje,
+          _subject: `Diagnóstico gratuito - ${form.empresa || form.nombre}`,
+          _captcha: 'false',
+        }),
+      })
+      const data = await res.json()
+      if (data.success === 'true' || data.success === true) {
+        setSubmitted(true)
+      } else {
+        throw new Error('form error')
+      }
+    } catch {
+      alert('Hubo un error al enviar. Por favor intenta de nuevo o escríbenos a daniela@agenciapolvora.cl')
+    } finally {
+      setLoading(false)
+    }
   }
 
   return (
@@ -242,7 +270,7 @@ export function Footer() {
   return (
     <footer className="footer section-dark" id="contacto">
       <div className="container footer-grid">
-        <div><img src="/logo-blanco.svg" style={{ width: 220 }} alt="Pólvora" /></div>
+        <div><img src="/logo-blanco.svg" width={220} height={70} style={{ width: 220, height: 'auto' }} alt="Pólvora" /></div>
         <div>
           <h4>Soluciones</h4>
           <a href="/soluciones/sistema-web-estrategico">Sistema web estratégico</a>

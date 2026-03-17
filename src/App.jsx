@@ -1,6 +1,7 @@
 import { useState, useEffect, useRef, useCallback } from 'react'
 import { Routes, Route } from 'react-router-dom'
 import SistemaWebEstrategico from './pages/SistemaWebEstrategico.jsx'
+import SistemaCaptacionLeads from './pages/SistemaCaptacionLeads.jsx'
 import { Navbar as SharedNavbar, CursorGlow as SharedCursorGlow } from './components/Shared.jsx'
 
 /* ─── HOOK: scroll reveal ─────────────────────────────────────── */
@@ -48,7 +49,6 @@ function Hero() {
   const titleRef = useReveal()
   const copyRef = useReveal()
   const actionsRef = useReveal()
-  const imgRef = useReveal()
 
   return (
     <div className="section-dark">
@@ -69,7 +69,14 @@ function Hero() {
           </div>
           <div className="hero-visual">
             <div className="hero-glow" />
-            <img ref={imgRef} className="reveal-right" src="/img-banner.png" alt="Sistema de ventas digital con automatización, CRM e inteligencia artificial" />
+            <img
+              src="/img-banner-optimizada.webp"
+              alt="Sistema de ventas digital con automatización, CRM e inteligencia artificial"
+              width={700} height={449}
+              fetchPriority="high"
+              loading="eager"
+              decoding="async"
+            />
           </div>
         </div>
       </section>
@@ -171,7 +178,7 @@ function FeatureCard({ num, title, desc }) {
 /* ─── SOLUTIONS ──────────────────────────────────────────────────── */
 const solutions = [
   { num: '01.', title: 'Sistema Web Estratégico', desc: 'Una web que convierte visitas en oportunidades. Web orientada a conversión para empresas con sitio antiguo o que no genera contactos.', link: '/soluciones/sistema-web-estrategico' },
-  { num: '02.', title: 'Sistema de Captación de Leads', desc: 'Sistema digital para captar y organizar prospectos. Landing optimizada, formularios, CRM y automatización de respuesta y seguimiento.' },
+  { num: '02.', title: 'Sistema de Captación de Leads', desc: 'Sistema digital para captar y organizar prospectos. Landing optimizada, formularios, CRM y automatización de respuesta y seguimiento.', link: '/soluciones/sistema-captacion-de-leads' },
   { num: '03.', title: 'Sistema de Ventas con IA', desc: 'Sistema que responde y gestiona oportunidades solo. Chatbot de ventas con IA, captura de datos, CRM y automatización de seguimiento.' },
   { num: '04.', title: 'Infraestructura Digital de Ventas', desc: 'Sistema digital completo para captar, gestionar y convertir clientes. Sitio web estratégico + captación + automatización de marketing + CRM + chatbot IA + dashboard.' },
 ]
@@ -477,6 +484,7 @@ export default function App() {
     <Routes>
       <Route path="/" element={<Home />} />
       <Route path="/soluciones/sistema-web-estrategico" element={<SistemaWebEstrategico />} />
+      <Route path="/soluciones/sistema-captacion-de-leads" element={<SistemaCaptacionLeads />} />
     </Routes>
   )
 }

@@ -466,7 +466,7 @@ p, a, li, input, textarea, button { font-size: 16px; line-height: 1.6; }
 .social:hover { border-color: var(--color-accent); background: rgba(236,22,80,.1); transform: translateY(-2px); }
 
 /* ─── HERO SERVICE (inner page) ─────────────────────────────────── */
-.hero-service { padding: 120px 0 78px; }
+.hero-service { padding: 120px 0 78px; min-height: 680px; display: flex; align-items: center; }
 .hero-service__grid {
   display: grid; grid-template-columns: 1fr 1.02fr;
   align-items: center; gap: 28px;
@@ -544,6 +544,7 @@ p, a, li, input, textarea, button { font-size: 16px; line-height: 1.6; }
 }
 .process-section .process-step h4 { color: var(--color-title); margin-bottom: 10px; }
 .process-section .process-step p { color: var(--text-muted-dark); font-size: 15px; line-height: 1.55; }
+.process-section__subtitle { color: var(--text-muted-dark); font-size: 15px; line-height: 1.6; max-width: 680px; margin: 14px auto 0; text-align: center; }
 .process-section__cta { text-align: center; }
 
 /* ─── RESULT SECTION (inner page) ───────────────────────────────── */
