@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="44.744" height="41.5" viewBox="0 0 44.744 41.5">
+  <defs>
+    <linearGradient id="linear-gradient" x1="0.5" x2="0.5" y2="1" gradientUnits="objectBoundingBox">
+      <stop offset="0" stop-color="#e91551"/>
+      <stop offset="1" stop-color="#88116f"/>
+    </linearGradient>
+  </defs>
+  <g id="speech-bubble_1438194" transform="translate(0.001 -0.5)">
+    <path id="Trazado_35556" data-name="Trazado 35556" d="M179.356,131.82a9.274,9.274,0,1,0,9.274,9.274A9.284,9.284,0,0,0,179.356,131.82Zm4.56,11.98a1.311,1.311,0,0,1-1.854,1.854l-2.706-2.706-2.706,2.706A1.311,1.311,0,0,1,174.8,143.8l2.706-2.706-2.706-2.706a1.311,1.311,0,0,1,1.854-1.854l2.706,2.706,2.706-2.706a1.311,1.311,0,0,1,1.854,1.854l-2.706,2.706Zm0,0" transform="translate(-155.219 -119.844)" fill="url(#linear-gradient)"/>
+    <path id="Trazado_35557" data-name="Trazado 35557" d="M38.711,6.581a20.507,20.507,0,0,0-29.149,0A20.687,20.687,0,0,0,3.53,21.25,20.927,20.927,0,0,0,5.686,30.5a8.642,8.642,0,0,1-4.9,5.7,1.311,1.311,0,0,0-.467,2.063,9.132,9.132,0,0,0,13.109.722,20.506,20.506,0,0,0,25.281-3.064,20.852,20.852,0,0,0,0-29.338ZM24.137,33.145a11.9,11.9,0,1,1,11.9-11.9A11.909,11.909,0,0,1,24.137,33.145Zm0,0" transform="translate(0 0)" fill="url(#linear-gradient)"/>
+  </g>
+</svg>
