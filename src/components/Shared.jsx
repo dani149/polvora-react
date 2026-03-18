@@ -283,7 +283,8 @@ export function Footer() {
           <a href="mailto:hola@agenciapolvora.cl">hola@agenciapolvora.cl</a>
           <div className="socials">
             <a href="https://www.instagram.com/polvora.digital?igsh=MXN5Z29jam43eXBnYg%3D%3D&utm_source=qr" target="_blank" rel="noopener noreferrer" className="social" aria-label="Instagram"><img src="/ig.svg" alt="Instagram" style={{ width: 20 }} /></a>
-            <a href="https://wa.me/56956270836" target="_blank" rel="noopener noreferrer" className="social" aria-label="WhatsApp"><img src="/icono-wpp.svg" alt="WhatsApp" style={{ width: 20 }} /></a>
+            <a href="https://www.linkedin.com/company/105840100/" target="_blank" rel="noopener noreferrer" className="social" aria-label="LinkedIn"><img src="/lk.svg" alt="LinkedIn" style={{ width: 20 }} /></a>
+            <a href="https://wa.me/56956270836" target="_blank" rel="noopener noreferrer" className="social" aria-label="WhatsApp"><img src="/whatsapp-icono.svg" alt="WhatsApp" style={{ width: 20 }} /></a>
           </div>
         </div>
       </div>
