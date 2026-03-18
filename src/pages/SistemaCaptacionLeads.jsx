@@ -48,7 +48,7 @@ function ProblemLeads() {
           con un sistema estructurado para capturar esos datos, dar seguimiento ni convertirlos
           en oportunidades comerciales. El tráfico existe. El sistema, no.
         </p>
-        <a href="#diagnostico" className="btn btn-gradient">Descubre cómo podemos ayudarte</a>
+        <a href="#solucion" className="btn btn-gradient">Descubre cómo podemos ayudarte</a>
       </div>
     </section>
   )
@@ -69,7 +69,7 @@ function SolutionLeads() {
   const cardRef = useReveal()
 
   return (
-    <section className="solution-section section-dark" aria-label="La solución: sistema de captación que trabaja mientras tú vendes">
+    <section id="solucion" className="solution-section section-dark" aria-label="La solución: sistema de captación que trabaja mientras tú vendes">
       <div className="container solution-section__grid">
         <div className="solution-section__content reveal-left" ref={contentRef}>
           <p className="section-kicker section-kicker--blue">LA SOLUCIÓN</p>

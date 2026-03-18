@@ -466,7 +466,8 @@ p, a, li, input, textarea, button { font-size: 16px; line-height: 1.6; }
   cursor: pointer;
 }
 .social:hover { border-color: var(--color-accent); background: rgba(236,22,80,.1); transform: translateY(-2px); }
-.social img { display: block; }
+.footer .social { display: flex; align-items: center; justify-content: center; margin-bottom: 0; }
+.social img { display: block; width: 20px; height: 20px; object-fit: contain; }
 
 /* ─── HERO SERVICE (inner page) ─────────────────────────────────── */
 .hero-service { padding: 120px 0 78px; min-height: 680px; display: flex; align-items: center; }

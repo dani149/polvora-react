@@ -48,7 +48,7 @@ function ProblemService() {
           usuario ni convertir visitas en clientes. Esto hace que pierdas oportunidades de forma
           silenciosa y constante.
         </p>
-        <a href="#diagnostico" className="btn btn-gradient">Descubre cómo podemos ayudarte</a>
+        <a href="#solucion" className="btn btn-gradient">Descubre cómo podemos ayudarte</a>
       </div>
     </section>
   )
@@ -69,7 +69,7 @@ function SolutionService() {
   const cardRef = useReveal()
 
   return (
-    <section className="solution-section section-dark" aria-label="La solución: webs pensadas como sistemas de ventas">
+    <section id="solucion" className="solution-section section-dark" aria-label="La solución: webs pensadas como sistemas de ventas">
       <div className="container solution-section__grid">
         <div className="solution-section__content reveal-left" ref={contentRef}>
           <p className="section-kicker section-kicker--blue">LA SOLUCIÓN</p>
