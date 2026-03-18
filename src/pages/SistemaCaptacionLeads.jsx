@@ -26,7 +26,7 @@ function HeroLeads() {
             <a href="#diagnostico" className="btn btn-gradient">Agendar Diagnóstico gratuito</a>
           </div>
           <div className="hero-service__media reveal-right" ref={imgRef}>
-            <img src="/banner-leads.png" alt="Sistema de captación de leads" />
+            <img src="/banner-leads-op.webp" alt="Sistema de captación de leads" width={1200} height={704} loading="eager" fetchPriority="high" />
           </div>
         </div>
       </section>

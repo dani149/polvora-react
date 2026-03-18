@@ -69,14 +69,18 @@ function Hero() {
           </div>
           <div className="hero-visual">
             <div className="hero-glow" />
-            <img
-              src="/img-banner-optimizada.webp"
-              alt="Sistema de ventas digital con automatización, CRM e inteligencia artificial"
-              width={700} height={449}
-              fetchPriority="high"
-              loading="eager"
-              decoding="async"
-            />
+            <picture>
+              <source media="(max-width: 820px)" srcSet="/img-banner-resp.webp" width={700} height={449} />
+              <source media="(min-width: 821px)" srcSet="/img-banner-op.webp" width={1300} height={833} />
+              <img
+                src="/img-banner-op.webp"
+                alt="Sistema de ventas digital con automatización, CRM e inteligencia artificial"
+                width={1300} height={833}
+                fetchPriority="high"
+                loading="eager"
+                decoding="async"
+              />
+            </picture>
           </div>
         </div>
       </section>

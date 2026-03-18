@@ -26,7 +26,7 @@ function HeroService() {
             <a href="#diagnostico" className="btn btn-gradient">Agendar Diagnóstico gratuito</a>
           </div>
           <div className="hero-service__media reveal-right" ref={imgRef}>
-            <img src="/banner-web.png" alt="Sistema web estratégico para empresas" />
+            <img src="/banner-web-op.webp" alt="Sistema web estratégico para empresas" width={1300} height={917} loading="eager" fetchPriority="high" />
           </div>
         </div>
       </section>
