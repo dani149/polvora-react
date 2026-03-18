@@ -163,18 +163,19 @@ export function Diagnostic() {
     setForm(f => ({ ...f, [field]: ev.target.value }))
     setErrors(e => ({ ...e, [field]: false }))
   }
-  const FORMSUBMIT_URL = 'https://formsubmit.co/ajax/daniela@agenciapolvora.cl'
-
   const handleSubmit = async (ev) => {
     ev.preventDefault()
     const e = validate()
     if (Object.keys(e).length) { setErrors(e); return }
     setLoading(true)
     try {
-      const res = await fetch(FORMSUBMIT_URL, {
+      const res = await fetch('https://api.web3forms.com/submit', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json', 'Accept': 'application/json' },
         body: JSON.stringify({
+          access_key: 'e7047bda-314f-4191-8ae6-17e7d57fc0a0',
+          subject: `Diagnóstico gratuito - ${form.empresa || form.nombre}`,
+          from_name: form.nombre,
           nombre: form.nombre,
           email: form.email,
           empresa: form.empresa,
@@ -182,15 +183,13 @@ export function Diagnostic() {
           industria: form.industria,
           problema: form.problema,
           mensaje: form.mensaje,
-          _subject: `Diagnóstico gratuito - ${form.empresa || form.nombre}`,
-          _captcha: 'false',
         }),
       })
       const data = await res.json()
-      if (data.success === 'true' || data.success === true) {
+      if (data.success) {
         setSubmitted(true)
       } else {
-        throw new Error('form error')
+        throw new Error(data.message || 'form error')
       }
     } catch {
       alert('Hubo un error al enviar. Por favor intenta de nuevo o escríbenos a daniela@agenciapolvora.cl')

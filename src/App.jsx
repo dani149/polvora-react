@@ -57,7 +57,7 @@ function Hero() {
         <div className="container hero-grid">
           <div className="hero-copy">
             <div className="eyebrow pink reveal" ref={eyebrowRef}>✦ AUTOMATIZACIÓN · IA · SISTEMA DE VENTAS</div>
-            <h1 ref={titleRef} className="reveal">Convierte tu web en un sistema de ventas PRUEBA</h1>
+            <h1 ref={titleRef} className="reveal">Convierte tu web en un sistema de ventas</h1>
             <p ref={copyRef} className="reveal">
               Combinamos desarrollo web, automatización, CRM e inteligencia artificial
               para transformar tu presencia digital en un motor de ventas.
